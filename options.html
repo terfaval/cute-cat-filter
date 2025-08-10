@@ -2,34 +2,21 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <title>Cute Cat Filter – Beállítások</title>
+  <title>Beállítások</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Beállítások</h1>
-  <form id="settingsForm">
-    <fieldset>
-      <legend>Kategóriák</legend>
-      <label><input type="checkbox" value="Közvélemény-kutatás" /> Közvélemény-kutatás</label><br />
-      <label><input type="checkbox" value="Háború/konfliktus" /> Háború/konfliktus</label><br />
-      <label><input type="checkbox" value="Természeti katasztrófa" /> Természeti katasztrófa</label><br />
-      <label><input type="checkbox" value="Egészség-para" /> Egészség-para</label><br />
-      <label><input type="checkbox" value="Gazdasági pánik" /> Gazdasági pánik</label><br />
-      <label><input type="checkbox" value="Bulvár/botrány" /> Bulvár/botrány</label>
-    </fieldset>
-    <fieldset>
-      <legend>Saját kulcsszavak (soronként egy)</legend>
-      <textarea id="customKeywords" rows="4" cols="30"></textarea>
-    </fieldset>
-    <fieldset>
-      <legend>Kép forrása</legend>
-      <label><input type="radio" name="imageSource" value="catApi" checked /> The Cat API</label>
-      <label><input type="radio" name="imageSource" value="custom" /> Saját képek</label>
-      <textarea id="customImages" rows="4" cols="30" placeholder="Minden sorban egy kép URL"></textarea>
-      <label>API kulcs: <input type="text" id="apiKey" /></label>
-    </fieldset>
-    <button id="save" type="button">Mentés</button>
-  </form>
+  <label for="mode">Képszolgáltató</label>
+  <select id="mode">
+    <option value="catapi">The Cat API</option>
+    <option value="cataas">CATAAS (cat as a service)</option>
+  </select>
+
+  <label for="catApiKey">Cat API kulcs (opcionális)</label>
+  <input type="text" id="catApiKey" placeholder="pl. live_xxxxxxxxxx">
+
+  <button id="save" type="button">Mentés</button>
+
   <script src="options.js"></script>
 </body>
 </html>

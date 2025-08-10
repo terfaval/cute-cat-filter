@@ -13,5 +13,8 @@ A bővítmény a [The Cat API](https://thecatapi.com/) szolgáltatást használj
 1. Regisztrálj a [The Cat API](https://thecatapi.com/) oldalon.
 2. A kapott API kulcsot add meg a beállítások oldalon.
 
-## Beállítások
-Az opciók oldalon kategóriánként kapcsolhatod a szűrést, saját kulcsszavakat és kép URL-eket adhatsz meg, valamint kiválaszthatod a képforrást (The Cat API vagy saját képek).
+## Képszolgáltató kiválasztása
+Az Opciók oldalon választhatsz:
+- **The Cat API**: Adj meg API kulcsot a jobb minőségért és több képért.
+- **CATAAS**: Kulcs nélkül működik.
+Ha a választott szolgáltató nem érhető el, a bővítmény automatikusan megpróbálja a másikat.

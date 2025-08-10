@@ -1,16 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "Cute Cat Filter",
-  "version": "1.0",
-  "description": "Elrejti a megadott kategóriákba tartozó tartalmakat és macskaképekkel helyettesíti.",
-  "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["https://api.thecatapi.com/*"],
+  "name": "Cuki Macskás Szűrő",
+  "version": "0.2.0",
+  "description": "Kategória-alapú tartalomszűrés és macskás helyettesítés.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.thecatapi.com/*",
+    "https://cataas.com/*"
+  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "css": ["styles.css"],
+    "run_at": "document_idle"
+  }],
   "options_page": "options.html",
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
-    }
-  ]
+  "action": { "default_title": "Cuki Macskás Szűrő" }
 }
