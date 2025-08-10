@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Cute Cat Filter",
+  "version": "1.0",
+  "description": "Elrejti a megadott kategóriákba tartozó tartalmakat és macskaképekkel helyettesíti.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://api.thecatapi.com/*"],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
