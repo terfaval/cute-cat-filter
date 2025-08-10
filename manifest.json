@@ -6,7 +6,7 @@
   "permissions": ["storage"],
   "host_permissions": [
     "<all_urls>",
-    "https://api.thecatapi.com/*",
+    "https://cute-cat-filter.workers.dev/*",
     "https://cataas.com/*"
   ],
   "content_scripts": [{
